@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas Basis Data</title>
+<style>
+    /* ANIMASI LATAR BELAKANG */
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(-45deg, #FAD0C4, #FFD1FF, #B5FFFC, #C9FFBF);
+        background-size: 400% 400%;
+        animation: gradientMove 10s ease infinite;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        max-width: 700px;
+        width: 100%;
+        padding: 30px;
+        text-align: left;
+        animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #A1C4FD, #C2E9FB);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+}
+
+
+    /* Accordion Style */
+    .accordion {
+        background: linear-gradient(90deg, #E0C3FC, #8EC5FC);
+        color: #333;
+        cursor: pointer;
+        padding: 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-bottom: 10px;
+    }
+
+    .accordion:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .panel {
+        padding: 0 18px;
+        background: rgba(255, 255, 255, 0.9);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        border-radius: 10px;
+    }
+
+    .panel.open {
+        max-height: 1000px;
+        padding: 18px;
+    }
+
+    a {
+        color: #0072ff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    p, li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    footer {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #444;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Tugas Basis Data</h2>
+
+    <!-- POST 1 -->
+    <button class="accordion">📘 Post 1: Video ERD tentang Penerapan Denormalisasi</button>
+    <div class="panel">
+        <p>Silakan tonton video penjelasan penerapan Denormalisasi pada ERD di tautan berikut:</p>
+        <p>🎥 <a href="https://youtu.be/aIzBcotZlvw?si=wLDjiyOUNnFdqq8C" target="_blank">
+            Klik di sini untuk membuka video
+        </a></p>
+    </div>
+
+    <!-- POST 2 -->
+    <button class="accordion">💻 Post 2: Apa itu SQL, DDL, DML, DCL, dan TCL</button>
+    <div class="panel">
+        <p><b>1. SQL (Structured Query Language):</b>  
+        Bahasa standar untuk mengelola dan mengolah data dalam sistem basis data relasional (RDBMS).</p>
+
+        <p><b>2. DDL (Data Definition Language):</b>  
+        Digunakan untuk mendefinisikan struktur database.  
+        Contoh perintah:  
+        <ul>
+            <li><code>CREATE TABLE</code></li>
+            <li><code>ALTER TABLE</code></li>
+            <li><code>DROP TABLE</code></li>
+        </ul></p>
+
+        <p><b>3. DML (Data Manipulation Language):</b>  
+        Digunakan untuk memanipulasi data dalam tabel.  
+        Contoh perintah:  
+        <ul>
+            <li><code>SELECT</code></li>
+            <li><code>INSERT</code></li>
+            <li><code>UPDATE</code></li>
+            <li><code>DELETE</code></li>
+        </ul></p>
+
+        <p><b>4. DCL (Data Control Language):</b>  
+        Digunakan untuk mengatur hak akses ke data.  
+        Contoh perintah:  
+        <ul>
+            <li><code>GRANT</code> – memberi izin akses</li>
+            <li><code>REVOKE</code> – mencabut izin</li>
+        </ul></p>
+
+        <p><b>5. TCL (Transaction Control Language):</b>  
+        Digunakan untuk mengatur transaksi agar data tetap konsisten.  
+        Contoh perintah:  
+        <ul>
+            <li><code>COMMIT</code> – menyimpan perubahan</li>
+            <li><code>ROLLBACK</code> – membatalkan perubahan</li>
+            <li><code>SAVEPOINT</code> – membuat titik penyimpanan sementara</li>
+        </ul></p>
+
+        <p>👉 SQL dibagi menjadi beberapa kategori agar pengelolaan data menjadi lebih terstruktur dan aman.</p>
+    </div>
+
+    <footer>
+        <p><b>Erdira Ninda Kirana</b> – UBP Karawang</p>
+    </footer>
+</div>
+
+<script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(button => {
+        button.addEventListener("click", () => {
+            const panel = button.nextElementSibling;
+            panel.classList.toggle("open");
+        });
+    });
+</script>
+
+</body>
+</html>
